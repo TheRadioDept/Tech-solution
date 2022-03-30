@@ -42,6 +42,11 @@ Code was formatted using `black` python formatter. If you do not have it install
 ```bash
 pip install black
 ``` 
+or to install it from GitHub: 
+```bash 
+pip install git+https://github.com/psf/black
+```
+
 You can also enable it inside Visual Studio Code by following these instructions: 
 1. Open your VSCode settings, by going 'Code -> Preferences -> Settings'.
 
