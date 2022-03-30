@@ -12,12 +12,12 @@ User must provide a translation key using CLI. Python code, written in `main.py`
  1. First, you need to clone this repository to your local machine. 
 
 ```bash
-git clone https://github.com/TheRadioDept/technical-question.git
+https://github.com/TheRadioDept/Tech-solution
 ```
 2. Access cloned repository to work with it. 
 
 ```bash
-cd technical-question
+cd Tech-solution
 ```
 
 ## Executing
