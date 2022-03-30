@@ -1,4 +1,4 @@
-1. Python `black` formatter:
+Python `black` formatter:
  
 `https://black.readthedocs.io/en/stable/`
 
