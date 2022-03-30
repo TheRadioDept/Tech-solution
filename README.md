@@ -60,7 +60,10 @@ For more information please see: `https://dev.to/adamlombard/how-to-use-the-blac
 
 
 
+## Scripts 
+1. Run `npm run test` to execute program with `deu` parameter. 
 
+2. Run `npm run black` to format code. Please note that you need to install it first if you haven't done it already. 
 
 
 
