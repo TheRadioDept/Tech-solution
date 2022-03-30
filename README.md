@@ -54,6 +54,8 @@ You can also enable it inside Visual Studio Code by following these instructions
 
 3. In the settings, search for "format on save" and enable the "Editor: Format on Save" option. 
 
+Please note that `black` cannot format incorrect python code since it rely on Python parsers to do the formatting in the first place.
+
 For more information please see: `https://dev.to/adamlombard/how-to-use-the-black-python-code-formatter-in-vscode-3lo0`
 
 
