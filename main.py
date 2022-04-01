@@ -1,7 +1,7 @@
 import json
 import sys
 from sys import argv
-import json
+
 
 #access .json file and load it's insides
 with open('countries.json') as f:
