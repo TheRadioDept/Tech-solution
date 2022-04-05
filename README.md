@@ -36,10 +36,9 @@ python main.py {{parameter}}
  ['cym', 'ces', 'deu', 'est', 'fin', 'fra', 'hrv', 'hun', 'ita', 'jpn', 'kor', 'nld', 'per', 'pol', 'por', 'rus', 'slk', 'spa', 'swe', 'urd', 'zho']
  ```
 
+##Requirements 
 
-
-
-
-
-
-
+To install requirements please execute this command within your cloned repository folder: 
+```bash
+pip install -r requirements.txt
+```
