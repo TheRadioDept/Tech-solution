@@ -1,29 +1,32 @@
 import json
 import sys
-from sys import argv
 
-
-#access .json file and load it's insides
-with open('countries.json') as f:
+# Checking if the command line has arguments, and if yes,
+# assign the argument to the variable for main func, otherwise print error
+# Making the script portable by defining absolute path
+with open("countries.json") as f:
     countries = json.load(f)
 
-#create a list of translation keys from .json file
-official_keys = {}
-for c in countries:
-    official_keys.setdefault(c['name']['official'], {}).update(c['translations'])
-
-#check if key value is empty or more than 1 s
-if len(sys.argv) == 1 or len(sys.argv) > 2:
-    print("Incorrect parameter")
+if len(sys.argv) != 2:
+    print("Parameter cannot be empty!")
     sys.exit()
 else:
-    key = argv[1]
+    key = sys.argv[1]
 
-#return countries names if CLI pAarameter matches one of the keys
-for official, keys  in official_keys.items():
-    if (key in keys):
-        print(keys[key]["official"])
-    else : 
-        print ("Translation key is not supported")
+# Defining a dynamic global list for error-checking related with unsupported user input
+keys = []
 
+# Filling in the global list defined above
+for i in range(len(countries)):
+    for j in countries[i]["translations"]:
+        if j not in keys:
+            keys.append(j)
+
+# Main function that uses if-else statement to error-check and if none is triggered, translates country names
+if key not in keys:
+    print("Key is not supported!")
+else:
+    for i in range(len(countries)):
+        if key in countries[i]["translations"]:
+            print(countries[i]["translations"][key]["official"])
 f.close()
