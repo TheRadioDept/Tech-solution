@@ -36,27 +36,6 @@ python main.py {{parameter}}
  ['cym','deu','fra','hrv','ita','jpn','nld','por','rus','spa']
  ```
 
-## Code formatting 
-
-Code was formatted using `black` python formatter. If you do not have it installed, please execute this command to install it: 
-```bash
-pip install black
-``` 
-or to install it from GitHub: 
-```bash 
-pip install git+https://github.com/psf/black
-```
-
-You can also enable it inside Visual Studio Code by following these instructions: 
-1. Open your VSCode settings, by going 'Code -> Preferences -> Settings'.
-
-2. Search for "python formatting provider" and select "black" from the dropdown menu. 
-
-3. In the settings, search for "format on save" and enable the "Editor: Format on Save" option. 
-
-Please note that `black` cannot format incorrect python code since it rely on Python parsers to do the formatting in the first place.
-
-For more information please see: `https://dev.to/adamlombard/how-to-use-the-black-python-code-formatter-in-vscode-3lo0`
 
 
 
