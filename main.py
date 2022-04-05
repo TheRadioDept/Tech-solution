@@ -1,29 +1,26 @@
 import json
 import sys
 
-# Checking if the command line has arguments, and if yes,
-# assign the argument to the variable for main func, otherwise print error
-# Making the script portable by defining absolute path
+#access .json file and load it's insides
 with open("countries.json") as f:
     countries = json.load(f)
-
-if len(sys.argv) != 2:
-    print("Parameter cannot be empty!")
-    sys.exit()
+    
+#check if key value is empty or more than 1
+if len(sys.argv) == 2:
+     key = sys.argv[1]
 else:
-    key = sys.argv[1]
+    print("Incorrect parameter.")
+    sys.exit()
 
-# Defining a dynamic global list for error-checking related with unsupported user input
-keys = []
-
-# Filling in the global list defined above
+#create a list of translation keys from .json file
+official_keys = []
 for i in range(len(countries)):
     for j in countries[i]["translations"]:
-        if j not in keys:
-            keys.append(j)
+        if j not in official_keys:
+            official_keys.append(j)
 
-# Main function that uses if-else statement to error-check and if none is triggered, translates country names
-if key not in keys:
+#return countries names if CLI parameter matches one of the keys        
+if key not in official_keys:
     print("Key is not supported!")
 else:
     for i in range(len(countries)):
