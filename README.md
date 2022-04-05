@@ -26,7 +26,7 @@ To execute program:
 ```bash
 python3 main.py {{parameter}} 
 ```
-For older pyhton version please use: 
+For older python version please use: 
 ```bash
 python main.py {{parameter}}
 ```
