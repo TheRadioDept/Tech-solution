@@ -33,7 +33,7 @@ python main.py {{parameter}}
 `{{parameter}}` refers to translation key entered by the user. Please find list of supported keys below: 
 
 ```
- ['cym','deu','fra','hrv','ita','jpn','nld','por','rus','spa']
+ ['cym', 'ces', 'deu', 'est', 'fin', 'fra', 'hrv', 'hun', 'ita', 'jpn', 'kor', 'nld', 'per', 'pol', 'por', 'rus', 'slk', 'spa', 'swe', 'urd', 'zho']
  ```
 
 
