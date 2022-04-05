@@ -7,23 +7,23 @@ import sys
 with open("countries.json") as f:
     countries = json.load(f)
 
-if len(sys.argv) != 2:
-    print("Parameter cannot be empty!")
-    sys.exit()
+if len(sys.argv) == 2:
+     key = sys.argv[1]
 else:
-    key = sys.argv[1]
+    print("Incorrect parameter.")
+    sys.exit()
 
 # Defining a dynamic global list for error-checking related with unsupported user input
-keys = []
+official_keys = []
 
 # Filling in the global list defined above
 for i in range(len(countries)):
     for j in countries[i]["translations"]:
-        if j not in keys:
-            keys.append(j)
+        if j not in official_keys:
+            official_keys.append(j)
 
 # Main function that uses if-else statement to error-check and if none is triggered, translates country names
-if key not in keys:
+if key not in official_keys:
     print("Key is not supported!")
 else:
     for i in range(len(countries)):
